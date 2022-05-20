@@ -31,12 +31,12 @@ You have an advice document that I give to you.
 
 ## How to use this tool:
 
-##You can check countries available:
+## -You can check countries available:
 
 ![ParrotPentesting-2022-05-20-14-24-47](https://user-images.githubusercontent.com/92258683/169527611-eaca910d-15ba-4a65-a25d-e0adbacbfad6.png)
 
 
-## If you don't want to check countries just:
+## -If you don't want to check countries just:
 
 
 ![ParrotPentesting-2022-05-20-14-28-06](https://user-images.githubusercontent.com/92258683/169528900-6d1bf8ce-2398-458d-a3d7-eb43874ad4c0.png)
