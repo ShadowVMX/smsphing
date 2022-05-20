@@ -36,7 +36,7 @@ apt install fortune &> /dev/null
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 echo " "
 sleep 1
-echo "$(tput setaf 1)[+]$(tput setaf 3)Instaling lolcat."
+echo "$(tput setaf 1)[+]$(tput setaf 3)Installing lolcat."
 apt install lolcat &> /dev/null
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 echo " "
