@@ -46,11 +46,21 @@ apt install curl &> /dev/null
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 echo " "
 sleep 1
+echo "$(tput setaf 1)[+]$(tput setaf 3)Installing shc."
+apt install shc &> /dev/null
+echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
+echo " "
+sleep 1
+
 
 echo "$(tput setaf 1)[+]$(tput setaf 3)Installing killsms."
 
 chmod +x killsms
+shc -f killsms 
+rm killsms killsms.x.c
+mv killsms.x killsms
 cp killsms /usr/bin/
+
 
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 sleep 1
