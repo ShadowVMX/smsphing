@@ -5,7 +5,7 @@
 
 if [[ $EUID != 0 ]] ; then
 	echo " "
-	echo "$(tput setaf 1)[!]$(tput setaf 3)You MUST be root."
+	echo "$(tput setaf 1)[!]$(tput setaf 3)You $(tput setaf 1)MUST $(tput setaf 3)be root."
 	echo " "
 	exit
 fi
@@ -36,7 +36,7 @@ apt install fortune &> /dev/null
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 echo " "
 sleep 1
-echo "$(tput setaf 1)[+]$(tput setaf 3)Installing lolcat."
+echo "$(tput setaf 1)[+]$(tput setaf 3)Instaling lolcat."
 apt install lolcat &> /dev/null
 echo "$(tput setaf 1)[V]$(tput setaf 3)Done."
 echo " "
