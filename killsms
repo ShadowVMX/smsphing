@@ -1,0 +1,98 @@
+#!/bin/bash
+#
+########################################
+#                                      #
+#    Juanma Coello (aka) ShadowVMX     #
+#                                      #
+########################################
+#
+#
+# Smishing tool for our community.
+#
+
+#----------------TRAP------------------#
+
+trap closeitall SIGINT
+
+#--------------LLAMADA AL ROOT------------------#
+
+function closeitall(){
+	echo " "
+	echo " "
+	echo "$(tput setaf 3)[!]$(tput setaf 6)Ctrl_c DETECTED, let's exit."
+	echo " "
+	sleep 1
+	echo "$(tput setaf 3)[*]$(tput setaf 6)Exiting ..."
+	echo " "
+	sleep 1.5
+	exit
+}
+
+#--------------FUNCTION-------------------------#
+
+
+if [[ $EUID != 0 ]] ; then
+	echo " "
+	echo "$(tput setaf 1)[!]$(tput setaf 3)You MUST be root."
+	echo " "
+	exit
+fi
+
+#---------------------BANNERS-------------------#
+
+
+clear
+echo " "
+echo " "
+fortune | cowsay -f eyes "KillSMS (Use it Well) - ShadowVMX." | toilet --metal -f term | lolcat
+echo " "
+toilet -f smblock --filter border:metal -w 40 KILLSMS | lolcat
+echo "$(tput setaf 6) "
+echo " "
+sleep 2
+echo " "
+echo " "
+
+read -p "$(tput setaf 3)[!]$(tput setaf 6)If you want to check countries available type (Y) if not (N): " chosen1
+
+if [[ $chosen1 == "Y" ]] ; then
+	echo "$(tput setaf 6)"
+	echo "https://docs.textbelt.com/faq/supported-countries"
+	echo " "
+	sleep 1
+	echo "$(tput setaf 3)[*]$(tput setaf 6)Thanks for using this tool."
+	sleep 1
+	echo " "
+	exit
+else
+
+read -p "$(tput setaf 3)[+]$(tput setaf 6)If you are ready, hit ENTER." a1
+echo " "
+
+#-------------------------TOMADEDATOS------------#
+
+read -p "$(tput setaf 3)[*]$(tput setaf 6)Insert Phone Number + Country code (+34678291824): " phone
+echo " "
+read -p "$(tput setaf 3)[*]$(tput setaf 6)Insert SMS: " sms
+echo " "
+
+#--------------------------------BUM---------------------#
+
+answer=`curl -# -X POST https://textbelt.com/text --data-urlencode phone="$phone" --data-urlencode message="$sms" -d key=textbelt | grep "error"`
+
+if [[ $? == "1" ]] ; then
+	echo " "
+	echo "$(tput setaf 3)[*]$(tput setaf 6)Success, your message is in her heart <3."
+	echo " "
+else
+	echo " "
+	echo "$(tput setaf 3)[!]$(tput setaf 1)FAIL$(tput setaf 6), only one message per day, not messages for her today </3. [Maybe your country code is not allowed ... ]"
+	echo " "
+fi
+
+sleep 1
+echo " "
+echo "$(tput setaf 3)[+]$(tput setaf 6)Thanks for using this tool, enjoy your day."
+echo " "
+sleep 0.5
+fi
