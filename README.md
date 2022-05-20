@@ -31,3 +31,15 @@ You have an advice document that I give to you.
 
 ## How to use:
 
+**You can check countries available:
+
+![ParrotPentesting-2022-05-20-14-24-47](https://user-images.githubusercontent.com/92258683/169527611-eaca910d-15ba-4a65-a25d-e0adbacbfad6.png)
+
+
+**If you don't want to check countries just:
+
+
+![ParrotPentesting-2022-05-20-14-24-47](https://user-images.githubusercontent.com/92258683/169528146-c533d738-687d-4ef5-aeb4-09f8771be6c1.png)
+
+
+
