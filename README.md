@@ -42,5 +42,9 @@ You have an advice document that I give to you.
 ![ParrotPentesting-2022-05-20-14-28-06](https://user-images.githubusercontent.com/92258683/169528900-6d1bf8ce-2398-458d-a3d7-eb43874ad4c0.png)
 
 
+## REPORTS:
 
+If you find some bug just create an Issue or type on my e-mail: Juanmacoello94@gmail.com
+
+## Thanks
 
