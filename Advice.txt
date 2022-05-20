@@ -1,0 +1,28 @@
+-You should know that it's gonna work only once per day.
+#
+-You can check this working on --> https://textbelt.com/
+#
+-$ curl -X POST https://textbelt.com/text \
+       --data-urlencode phone='5555555555' \
+       --data-urlencode message='Hello world' \
+       -d key=textbelt
+#
+-RESPONESES:
+
+{"success": true, "quotaRemaining": 40, "textId": 12345}
+
+Example out-of-quota or invalid key response:
+
+{"success": false, "quotaRemaining": 0, "error": "Out of quota"}
+
+Example response to request with phone, message, or key missing:
+
+{"success": false, "error": "Incomplete request"}
+
+#
+-REMEMBER
+This kind of servers CAN'T SEND ANY URLs.
+
+#
+
+-Enjoy.
